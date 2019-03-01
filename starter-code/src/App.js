@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import contacts from './data/contacts';
-import HeaderCol from './components/misc/HeaderCol'
+import HeaderCol from './components/HeaderCol'
 
 class App extends Component {
   render() {
@@ -12,22 +12,22 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">IronContacts</h1>
         </header>
-        <p className="App-intro">
-          IRON CONTACTS
-        </p>
-        <HeaderCol />
-          <div className="container mt-4">
-          <div className="row">
-            <div className="col-12">
-              {/* <ContactList contacts={contacts} /> */}
-            </div>
-          </div>
-        </div>
-          
-            
-          
 
-      </div>
+        <div className="main container">
+          <div className="container">
+            <p className="App-intro">
+              IRON CONTACTS
+            </p>
+          </div>
+
+          <HeaderCol />
+        
+          {/* <ContactList contacts={contacts} /> */}
+          
+        </div>
+        
+      </div>  
+            
     );
   }
 }
