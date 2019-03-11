@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import contacts from './data/contacts';
-import HeaderCol from './components/HeaderCol'
+
+import HeaderCol from './components/HeaderCol';
+import ContactList from './components/ContactList';
 
 class App extends Component {
   render() {
@@ -13,16 +14,13 @@ class App extends Component {
           <h1 className="App-title">IronContacts</h1>
         </header>
 
-        <div className="main container">
-          <div className="container">
-            <p className="App-intro">
-              IRON CONTACTS
-            </p>
-          </div>
-
+        <div className="container" style={{margin: "100px"}}>
           <HeaderCol />
-        
-          {/* <ContactList contacts={contacts} /> */}
+          <div className="container">
+
+              <ContactList />
+    
+          </div>    
           
         </div>
         

@@ -1,18 +1,18 @@
 import React from 'react';
 
 
-export default ContactItem ((props) => {
+const ContactItem = (props) => {
 
     return (
 
         <tr>
-            <td><img src={props.pictureUrl} alt={props.name} className="img-thumbnail" style={{ maxWidth: "70px" }}/></td>
-            <td>{props.name}</td>
+            <td><img src={props.pictureUrl} alt={props.name} className="img-thumbnail" style={{ maxWidth: "100px" }}/></td>
+            <td style = {{padding:"20px"}}>{props.name}</td>
             <td>{props.popularity.toFixed(2)}</td>
-            <td><button className="btn btn-danger" onClick={props.onClickDelete}>x</button></td>
+            <td><button className="button is-small is-danger is-hovered is-focused"  onClick={props.onClickDelete}> X </button></td>
         </tr>
     )
+  }
 
 
-}
-)
+export default ContactItem;
