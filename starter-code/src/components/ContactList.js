@@ -9,13 +9,25 @@ class ContactList extends Component {
         super (props)
 
         this.state = {
-            contacts: [...data].slice(0,5)
+            allContacts: [...data],
+            contacts: [...data].slice(0,5),
+            shortBy: undefined
         }
     }
+    
+    addRandomContact = () => {
+        const otherContacts = this.state.allContacts.filter(contact => !this.state.contacts.some(c => c === contact));
+        const randContact = otherContacts[Math.floor(Math.random() * otherContacts.length)];
 
+        this.setState({
+            contacts: [...this.state.contacts, randContact]
+          })
+      }
+      
     render (){
-
+    
         console.log(this.state.contacts);
+
 
         return(
             <tbody>
